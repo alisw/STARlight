@@ -31,19 +31,19 @@ BEGIN {
 # • int: number of entries in weight list (may be zero)
 # • double: optional list of weights
   event_number = $2
-  num_mpi = "_" ## ignored
-  ev_scale = "_" ## ignored
-  ev_alpha_QCD = "_" ## ignored
-  ev_alpha_QED = "_" ## ignored
-  sig_process_id = "_" ## ignored
-  sig_process_vtx_barcode = "_" ## ignored
+  num_mpi = 0 ## ignored
+  ev_scale = 0. ## ignored
+  ev_alpha_QCD = 0. ## ignored
+  ev_alpha_QED = 0. ## ignored
+  sig_process_id = 0 ## ignored
+  vtx_barcode = 0 ## ignored
   num_vtx = $4 ##  STARLight nvertices
-  beam_part1_barcode = "_" ## ignored
-  beam_part2_barcoce = "_" ## ignored
-  num_random_state_list = "_" ## ignored
+  beam_part1_barcode = 0 ## ignored
+  beam_part2_barcoce = 0 ## ignored
+  num_random_state_list = 0 ## ignored
   num_weights = 1
   list_of_weights = 1
-  printf("E %d %s %s %s %s %s %s %d %s %s %d %d %e\n",
+  printf("E %d %d %e %e %e %d %d %d %d %d %d %d %e\n",
          event_number,
          num_mpi,
          ev_scale,
@@ -72,15 +72,15 @@ BEGIN {
 # • int: number of entries in weight list (may be zero)
 # • double: optional list of weights
   barcode = -$6 ## nv
-  id = "_" ## ignored
+  id = 0 ## ignored
   x = $2
   y = $3
   z = $4
   ctau = $5
-  num_orphan_in = "_" ## ignored
+  num_orphan_in = 0 ## ignored
   num_out = $9 ## ndaughters
-  num_weight = "_" ## ignored
-  printf("V %d %s %e %e %e %e %s %d %s\n",
+  num_weight = 0 ## ignored
+  printf("V %d %d %e %e %e %e %d %d %d\n",
          barcode,
          id,
          x,
@@ -111,7 +111,7 @@ BEGIN {
   # • int: number of entries in flow list (may be zero)
   # • int, int: optional code index and code for each entry in the flow list
   ntr = $7
-  barcode =  "_" ## ignored: should be $7 == STARLight ntr
+  barcode =  0 ## ignored: should be $7 == STARLight ntr
   pdg_id = $9
   px = $3
   py = $4
@@ -125,11 +125,11 @@ BEGIN {
   # • 2 : decayed Standard Model hadron or tau or mu lepton, excepting virtual intermediate states thereof  (i.e. the particle must undergo a normal decay, not e.g. a shower branching). Such particles must  always be labelled ’2’. No other particles can be labelled ’2’.
   # • 3 : a documentation entry
   # • 4 : an incoming beam particle
-  pol_theta =  "_" ## ignored
-  pol_phi = "_" ## ignored
+  pol_theta =  0. ## ignored
+  pol_phi = 0. ## ignored
   barcode_vtx_incoming = 0
-  num_flow_list = "_" ## ignored
-  printf("P %s %d %e %e %e %e %e %d %s %s %d %s\n",
+  num_flow_list = 0 ## ignored
+  printf("P %d %d %e %e %e %e %e %d %e %e %d %d\n",
          barcode,
          pdg_id,
          px,

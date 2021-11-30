@@ -57,6 +57,7 @@ class upcEvent
       const std::vector<vector3> * getVertices() const { return &_vertices; }
       const std::vector<float> * getGammaEnergies() const { return &_gammaEnergies; }
 
+      upcEvent(const upcEvent& upcev) = default;
       upcEvent & operator=(const upcEvent&);
       upcEvent & operator+(const upcEvent&);
       

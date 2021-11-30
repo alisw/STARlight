@@ -52,6 +52,7 @@ class vector3
       void SetVector(double x, double y, double z);
       void SetVector(double *vec);
 
+      constexpr vector3(const vector3& vec) = default;
 	    vector3& operator =(const vector3& vec)
 	    {
 		    if (this != &vec)

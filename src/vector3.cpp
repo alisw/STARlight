@@ -42,6 +42,12 @@ vector3::vector3()
 }
 
 
+vector3::vector3(const vector3& other)
+{
+  *this = other;
+}
+
+
 vector3::vector3(double x, double y, double z)
 {
    _vec[0] = x;

@@ -3,7 +3,7 @@
 function abs(x) { return (x>0 ? x : -x) }
 
 function xyzm2e(x,y,z,m) {
-  return sqrt(x*x + y*y + z*z - m*m); ## E^2 = m^2 + p^2
+  return sqrt(x*x + y*y + z*z + m*m); ## E^2 = m^2 + p^2
 }
 
 BEGIN {
